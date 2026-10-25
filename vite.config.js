@@ -2,8 +2,8 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 
-// base './' keeps asset URLs relative, so the built site works on any host or sub-folder.
+// base '/' — needed so asset URLs resolve correctly from the theme sub-paths (/1 .. /5), not just the root.
 export default defineConfig({
-  base: './',
+  base: '/',
   plugins: [react(), tailwindcss()],
 })
