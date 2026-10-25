@@ -21,7 +21,6 @@ const C = {
 }
 
 const SMILE = 'M52.5 63 Q60 69 67.5 63 Q60 65.2 52.5 63 Z'
-const LAUGH = 'M51 61.5 Q60 78 69 61.5 Q60 64.5 51 61.5 Z'
 
 export default function Person({
   who = 'groom',
@@ -164,7 +163,8 @@ export default function Person({
                 stroke={C.lip}
                 strokeWidth="1.4"
                 strokeLinejoin="round"
-                animate={laugh ? { d: [SMILE, LAUGH, SMILE, LAUGH, SMILE] } : undefined}
+                style={{ originX: '60px', originY: '63px' }}
+                animate={laugh ? { scaleY: [1, 2.4, 1, 2.1, 1] } : undefined}
                 transition={{ duration: 2.6, repeat: Infinity, ease: 'easeInOut' }}
               />
             </>

@@ -22,7 +22,7 @@ export default function Chapter6() {
     <>
       <Petals count={26} fixed={false} />
       <motion.div
-        className="absolute bottom-[2%] left-1/2 -ml-[30%] h-[58%] w-[60%]"
+        className="absolute bottom-[18%] left-1/2 -ml-[26%] h-[40%] w-[52%]"
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.3 }}

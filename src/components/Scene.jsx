@@ -63,8 +63,10 @@ export default function Scene({
           {title}
         </div>
 
-        {/* Stage: characters + props */}
-        <div className="pointer-events-none absolute inset-x-0 top-0 z-10 h-[68%]">{stage}</div>
+        {/* Stage: characters + props. Height is viewport-relative (svh), matching the text's pt-[62svh] below —
+            sections can grow taller than 100svh when a chapter's text block is long (e.g. Chapter 6's reveal
+            card), and a %-based height here would drift out of sync with that fixed text offset. */}
+        <div className="pointer-events-none absolute inset-x-0 top-0 z-10 h-[62svh]">{stage}</div>
 
         {/* Text */}
         <div className="relative z-20 px-5 pb-12 pt-[62svh]">{children}</div>
